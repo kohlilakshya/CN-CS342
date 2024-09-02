@@ -233,3 +233,29 @@ This assignment involves implementing various network protocols and simulations 
         ```
     4. **Observe**:
         - The program will demonstrate the flow control between sender and receiver using the Stop-and-Wait protocol.
+
+## Assignment 4: Network Protocols & Simulations
+
+### Task 1: WFQ Load Balancer
+
+**Objective**: Implement a load balancer using the WFQ algorithm.
+
+**Compile and Execute**:
+```bash
+g++ -std=c++11 -o q1 q1.cpp
+./q1
+```
+
+### Task 2: Airport Security Lines
+
+**Objective**: Simulate and optimize airport security screening.
+
+**Compile**:
+```bash
+g++ -std=c++11 -o q2 q2.cpp
+```
+
+**Run**:
+```bash
+./q2
+```
