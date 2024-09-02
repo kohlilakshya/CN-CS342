@@ -106,10 +106,6 @@ The repository is organized into directories for each lab, with each directory c
           ```
           Valid operators are `+`, `-`, `*`, `/`, and `^`.
 
-Sure, here’s the updated README with a different title:
-
----
-
 ### Assignment 02: Network Applications and Socket Programming
 
 - **Description**: This assignment involves implementing various network applications using socket programming in C/C++/Java. The tasks include creating a DNS lookup tool, an HTTP web cache with LRU eviction policy, and a chat server with client-client communication capabilities.
@@ -176,3 +172,64 @@ Sure, here’s the updated README with a different title:
     
     5. **Use the client** to connect to the server. You can send messages to all connected clients (broadcast) or to specific clients (private chat). Use `/exit` to terminate the client connection, and the server will notify all clients before shutting down.
 
+
+
+
+## Assignment 03: Routing Protocols, MAC Layer Simulation, and Flow Control
+
+### Description
+This assignment involves implementing various network protocols and simulations using C/C++. The tasks include a simplified OSPF routing protocol, a MAC layer simulation using CSMA/CA, and the Stop-and-Wait flow control protocol.
+
+### Objectives
+
+- **Q1: Simplified OSPF Routing Protocol**
+  - **Description**: Implement a simplified version of the OSPF (Open Shortest Path First) routing protocol. Build a routing table for a network of routers and simulate packet routing between them.
+
+  - **Instructions**:
+    1. **Compile the code**:
+        ```bash
+        g++ -std=c++11 -o ospf q1.cpp 
+        ```
+    2. **Run the program**:
+        ```bash
+        ./ospf
+        ```
+
+- **Q2: MAC Layer Simulation with CSMA/CA**
+  - **Description**: Simulate a wireless network’s MAC layer using the CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) protocol.
+
+  - **Instructions**:
+    1. **Compile the code**:
+        ```bash
+        g++ -std=c++11 -o mac q2.cpp
+        ```
+    2. **Run the program**:
+        ```bash
+        ./mac
+        ```
+    3. **Observe**:
+        - Review the statistics of successful transmissions, collisions, and backoffs.
+
+- **Q3: Stop-and-Wait Flow Control Protocol**
+  - **Description**: Implement the Stop-and-Wait flow control protocol to simulate reliable data transmission.
+
+  - **Files**:
+    - `senderQ3.cpp`: Contains the implementation of the sender using Stop-and-Wait protocol.
+    - `receiverQ3.cpp`: Contains the implementation of the receiver using Stop-and-Wait protocol.
+
+  - **Instructions**:
+    1. **Compile the code**:
+        ```bash
+        g++ -o sender senderQ3.cpp
+        g++ -o receiver receiverQ3.cpp
+        ```
+    2. **Run the receiver**:
+        ```bash
+        ./receiver
+        ```
+    3. **Run the sender**:
+        ```bash
+        ./sender
+        ```
+    4. **Observe**:
+        - The program will demonstrate the flow control between sender and receiver using the Stop-and-Wait protocol.
