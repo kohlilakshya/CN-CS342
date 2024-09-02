@@ -1,0 +1,21 @@
+Q1. Start your TCP client application without the TCP server running. What happens? Why?
+
+Ans1:
+
+A TCP client application will attempt to connect to the server, encounter a connection timeout, raise an exception, and activate error handling methods if the TCP server is not already operating. The following scenarios could occur:
+
+1. The client application will make an effort to connect to the server at the supplied address and port.
+2. The connection attempt will probably time out since the server is not active. An error message reading "connection refused" will appear.
+3. Depending on how our client application is built, it may show the user an error message informing them that the server is unavailable or that the connection attempt failed.
+4. Some client applications might implement logic to periodically retry connecting to the server. This can be useful when the server downtime is expected to be temporary.
+ 
+
+
+Q2. Start your UDP client application without the UDP server running. What happens? Why?
+
+Since UDP is connectionless and without formal acknowledgment, there could not be any early signals of the communication failure when a UDP client program is launched without an active UDP server. To maintain data integrity and a better user experience, the client application must have adequate error handling mechanisms in place to recognize and react to datagram losses or failures. The following could happen:
+
+1. The UDP client application will make an effort to send a datagram (a UDP packet) to the designated server address and port.
+2. The datagram will be sent into the network but will not reach any destination because the server is not operational. UDP  is connectionless and does not formally connect to the server.
+3. TCP, unlike UDP, has an integrated acknowledgment system. Because of this, the client won't get any confirmation from the server that the datagram was received or handled.
+4. For failing datagram transmission, UDP might not by default generate an exception, unlike TCP, which is capable of doing so. This is due to UDP's connectionless nature, which means that transmitting datagrams doesn't always necessitate a direct response from the server.
